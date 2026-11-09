@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Researching vernacularity — Johan Tampubolon</title>
+  <meta name="description" content="Teaching the GrabMerchant AI Assistant to sound local — not like a textbook.">
+  <meta name="theme-color" content="#f5f0e6">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="project">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="wordmark" href="../../" aria-label="Johan Tampubolon, home">
+        <span class="wordmark-name"><span class="wj">Johan<svg class="wj-line" viewBox="0 0 80 8" aria-hidden="true"><path d="M2 5.2C16 2 28 7 44 4.2S66 6.2 78 3.2" stroke="#d2432a" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></span>Tampubolon</span>
+        <span class="wordmark-tag">← writes for machines &amp; people</span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+      <nav id="nav-menu" class="nav-links" aria-label="Primary">
+        <a href="../../#work">Work</a>
+        <a href="../../#approach">Approach</a>
+        <a href="../../#about">About</a>
+        <a class="btn-pill" href="../../#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="case-hero">
+      <div class="shell">
+        <p class="crumb"><a href="../">← GrabMerchant AI Assistant</a> <span aria-hidden="true">/</span> <span>Project 01 of 04</span></p>
+        <h1>Teaching an AI assistant to sound local — not like a textbook</h1>
+        <p class="lead">I researched vernacularity — how merchants actually talk about their business — and how the GrabMerchant AI Assistant could answer in natural, professional local language instead of stiff, translated copy.</p>
+        <div class="meta meta-3">
+          <div>
+            <p class="label">Confirmed</p>
+            <p>Research into vernacularity and how to make the assistant answer in natural, professional local language.</p>
+          </div>
+          <div>
+            <p class="label">My focus</p>
+            <p>Language research, register guidelines, prompt rules</p>
+          </div>
+          <div>
+            <p class="label">Not yet confirmed</p>
+            <p>Methods, rollout and outcomes — shown here as illustrative drafts</p>
+          </div>
+        </div>
+        <p class="badge badge-pending hero-badge"><span class="dot" aria-hidden="true"></span>Project confirmed · details pending</p>
+      </div>
+    </header>
+
+    <section class="band">
+      <div class="shell split">
+        <div>
+          <p class="step-kicker">01 — Challenge</p>
+          <h2>Translated tone feels distant</h2>
+          <p>Formal, translated answers sound like a manual. Overdone slang sounds like a caricature. Both cost trust.</p>
+        </div>
+        <div>
+          <p class="pull">The goal isn’t dialect. It’s sounding like a capable local colleague: familiar words, respectful tone, zero caricature.</p>
+          <p class="hand-row"><span class="hand">professional, never caricature</span>
+            <svg width="48" height="22" viewBox="0 0 48 22" aria-hidden="true"><path d="M2 12c12 4 20-6 32-2" fill="none" stroke="#d2432a" stroke-width="1.6" stroke-linecap="round"/><path d="M30 6l8 4-6 6" fill="none" stroke="#d2432a" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="step-kicker">02 — Approach</p>
+            <h2>From how people talk to rules a model follows</h2>
+            <p class="intro">Proposed reconstruction of the approach, for review.</p>
+          </div>
+          <div>
+            <div class="cards">
+              <article class="card">
+                <p class="n">1</p>
+                <h3>Listen first</h3>
+                <p>Gather how merchants phrase questions in their own words (sources to be confirmed).</p>
+              </article>
+              <article class="card">
+                <p class="n">2</p>
+                <h3>Pick a register</h3>
+                <p>Define a scale — formal, professional-local, casual — and target the middle.</p>
+              </article>
+              <article class="card">
+                <p class="n">3</p>
+                <h3>Encode it</h3>
+                <p>Turn the register into prompt rules and a preferred-terms glossary.</p>
+              </article>
+            </div>
+            <p class="badge badge-concept center-badge"><span class="dot" aria-hidden="true"></span>Illustrative reconstruction — for review</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="step-kicker">03 — Example artifact</p>
+            <h2>Same answer, three registers</h2>
+            <p class="intro">Original example in Bahasa Indonesia, written for this page — not a real merchant message.</p>
+          </div>
+          <div>
+            <div class="register-grid">
+              <article class="register">
+                <p class="label">Too formal</p>
+                <p class="line">Penjualan Anda mengalami penurunan sebesar 12% dibandingkan minggu lalu.</p>
+                <p class="hand">correct, but cold</p>
+              </article>
+              <article class="register register-target">
+                <p class="label">Target · professional-local</p>
+                <p class="line">Penjualan minggu ini turun 12% dari minggu lalu. Coba tambah foto menu andalanmu, yuk.</p>
+                <p class="hand">familiar + respectful</p>
+              </article>
+              <article class="register">
+                <p class="label">Too casual</p>
+                <p class="line">Wah, jualan lagi seret nih, bos!</p>
+                <p class="hand">caricature — avoid</p>
+              </article>
+            </div>
+            <div class="prompt" style="margin-top:16px">
+              <p class="label">Prompt rule — excerpt</p>
+              <pre>## Register
+Use everyday local words merchants use for their business.
+Keep it respectful: no slang, no regional caricature.
+Prefer short sentences. One suggestion per answer.</pre>
+            </div>
+            <p class="badge badge-concept center-badge"><span class="dot" aria-hidden="true"></span>From portfolio record</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell split">
+        <div>
+          <p class="step-kicker">04 — Evidence</p>
+          <h2>What I'll confirm before publishing</h2>
+          <p>No results are claimed on this page.</p>
+        </div>
+        <div>
+          <ul class="checks">
+            <li><span class="box" aria-hidden="true"></span>Which markets and languages were in scope</li>
+            <li><span class="box" aria-hidden="true"></span>What research methods and sources were used</li>
+            <li><span class="box" aria-hidden="true"></span>How register guidance was adopted in prompts or reviews</li>
+            <li><span class="box" aria-hidden="true"></span>Any comprehension or satisfaction signals approved for sharing</li>
+          </ul>
+          <p class="badge badge-pending center-badge"><span class="dot" aria-hidden="true"></span>Outcomes pending confirmation</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell">
+      <footer class="case-footer">
+        <div>
+          <p class="label">Back to</p>
+          <a href="../">← GrabMerchant AI Assistant</a>
+        </div>
+        <div class="next">
+          <p class="label">Next project</p>
+          <a href="../recommendations/">Designing recommendations →</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <script src="../../js/site.js"></script>
+</body>
+</html>
