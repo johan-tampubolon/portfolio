@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adding support capability — Johan Tampubolon</title>
+  <meta name="description" content="Adding support capability without letting the GrabMerchant AI Assistant guess.">
+  <meta name="theme-color" content="#f5f0e6">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="project">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="wordmark" href="../../" aria-label="Johan Tampubolon, home">
+        <span class="wordmark-name"><span class="wj">Johan<svg class="wj-line" viewBox="0 0 80 8" aria-hidden="true"><path d="M2 5.2C16 2 28 7 44 4.2S66 6.2 78 3.2" stroke="#d2432a" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></span>Tampubolon</span>
+        <span class="wordmark-tag">← writes for machines &amp; people</span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+      <nav id="nav-menu" class="nav-links" aria-label="Primary">
+        <a href="../../#work">Work</a>
+        <a href="../../#approach">Approach</a>
+        <a href="../../#about">About</a>
+        <a class="btn-pill" href="../../#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="case-hero">
+      <div class="shell">
+        <p class="crumb"><a href="../">← GrabMerchant AI Assistant</a> <span aria-hidden="true">/</span> <span>Project 04 of 04</span></p>
+        <h1>Adding support capability without letting the assistant guess</h1>
+        <p class="lead">Merchants also bring support questions — payouts, account access, disputes — that a coaching assistant shouldn’t improvise. I worked on adding support capability to the AI Assistant.</p>
+        <div class="meta meta-3">
+          <div>
+            <p class="label">Confirmed</p>
+            <p>Adding support capability to the AI Assistant</p>
+          </div>
+          <div>
+            <p class="label">My focus</p>
+            <p>Support intents, answer boundaries, hand-off language</p>
+          </div>
+          <div>
+            <p class="label">Not yet confirmed</p>
+            <p>Methods, rollout and outcomes — shown here as illustrative drafts</p>
+          </div>
+        </div>
+        <p class="badge badge-pending hero-badge"><span class="dot" aria-hidden="true"></span>Project confirmed · details pending</p>
+      </div>
+    </header>
+
+    <section class="band">
+      <div class="shell split">
+        <div>
+          <p class="step-kicker">01 — Challenge</p>
+          <h2>Helpful is not the same as guessing</h2>
+          <p>A wrong answer about money or access is worse than no answer. The assistant needs to know when to answer and when to hand off.</p>
+        </div>
+        <div>
+          <p class="pull">Answer what’s documented, say clearly what isn’t, and hand off with context so nobody repeats themselves.</p>
+          <p class="hand-row"><span class="hand">when unsure, say so</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="step-kicker">02 — Approach</p>
+            <h2>Answer, clarify, or hand off</h2>
+            <p class="intro">Proposed reconstruction of the approach, for review.</p>
+          </div>
+          <div>
+            <div class="cards">
+              <article class="card">
+                <p class="n">1</p>
+                <h3>Spot support intent</h3>
+                <p>Separate coaching questions from account and money questions.</p>
+              </article>
+              <article class="card">
+                <p class="n">2</p>
+                <h3>Answer from known content</h3>
+                <p>Use approved help content when confident.</p>
+              </article>
+              <article class="card">
+                <p class="n">3</p>
+                <h3>Hand off well</h3>
+                <p>When unsure, say so and route to Support with context.</p>
+              </article>
+            </div>
+            <p class="badge badge-concept center-badge"><span class="dot" aria-hidden="true"></span>Illustrative reconstruction — for review</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="step-kicker">03 — Example artifact</p>
+            <h2>Proposed routing &amp; hand-off copy</h2>
+            <p class="intro">Proposed reconstruction — not a description of the shipped system.</p>
+          </div>
+          <div>
+            <div class="cards">
+              <article class="card">
+                <p class="n">A</p>
+                <h3>Coaching</h3>
+                <p>“How do I get more orders?” → assistant answers.</p>
+              </article>
+              <article class="card">
+                <p class="n">B</p>
+                <h3>Documented support</h3>
+                <p>“How do I change my payout account?” → answer from help content.</p>
+              </article>
+              <article class="card">
+                <p class="n">C</p>
+                <h3>Unclear or sensitive</h3>
+                <p>“My payout is missing” → acknowledge + hand off.</p>
+              </article>
+            </div>
+            <div class="prompt" style="margin-top:16px">
+              <p class="label">Hand-off message — example</p>
+              <pre>I can’t check payout details myself, and I don’t want to guess.
+Our Support team can — I’ve added a summary of your question
+so you won’t need to repeat it. [Contact Support]</pre>
+            </div>
+            <p class="badge badge-concept center-badge"><span class="dot" aria-hidden="true"></span>From portfolio record</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell split">
+        <div>
+          <p class="step-kicker">04 — Evidence</p>
+          <h2>What I'll confirm before publishing</h2>
+          <p>No results are claimed on this page.</p>
+        </div>
+        <div>
+          <ul class="checks">
+            <li><span class="box" aria-hidden="true"></span>Which support topics were in scope</li>
+            <li><span class="box" aria-hidden="true"></span>How support content and hand-offs actually worked</li>
+            <li><span class="box" aria-hidden="true"></span>What I owned versus partner teams</li>
+            <li><span class="box" aria-hidden="true"></span>Any outcomes approved for sharing</li>
+          </ul>
+          <p class="badge badge-pending center-badge"><span class="dot" aria-hidden="true"></span>Outcomes pending confirmation</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell">
+      <footer class="case-footer">
+        <div>
+          <p class="label">Back to</p>
+          <a href="../">← GrabMerchant AI Assistant</a>
+        </div>
+        <div class="next">
+          <p class="label">Next project</p>
+          <a href="../vernacular/">Researching vernacular AI →</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <script src="../../js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Designing recommendations — Johan Tampubolon</title>
+  <meta name="description" content="Designing recommendations merchants can act on inside the GrabMerchant AI Assistant.">
+  <meta name="theme-color" content="#f5f0e6">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="project">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="wordmark" href="../../" aria-label="Johan Tampubolon, home">
+        <span class="wordmark-name"><span class="wj">Johan<svg class="wj-line" viewBox="0 0 80 8" aria-hidden="true"><path d="M2 5.2C16 2 28 7 44 4.2S66 6.2 78 3.2" stroke="#d2432a" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></span>Tampubolon</span>
+        <span class="wordmark-tag">← writes for machines &amp; people</span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+      <nav id="nav-menu" class="nav-links" aria-label="Primary">
+        <a href="../../#work">Work</a>
+        <a href="../../#approach">Approach</a>
+        <a href="../../#about">About</a>
+        <a class="btn-pill" href="../../#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="case-hero">
+      <div class="shell">
+        <p class="crumb"><a href="../">← GrabMerchant AI Assistant</a> <span aria-hidden="true">/</span> <span>Project 02 of 04</span></p>
+        <h1>Designing recommendations merchants can act on</h1>
+        <p class="lead">Inside the GrabMerchant AI Assistant, recommendations turn live performance data into a next step. I designed the language system underneath: the intent map, response logic, the system prompt that governs voice and guardrails, and contributions to how recommendations and generated content are evaluated.</p>
+        <div class="meta">
+          <div>
+            <p class="label">Role</p>
+            <p>Senior Content Designer — UX writer on the assistant</p>
+          </div>
+          <div>
+            <p class="label">I owned</p>
+            <p>Conversation logic, voice &amp; tone, system prompt</p>
+          </div>
+          <div>
+            <p class="label">I contributed to</p>
+            <p>Evaluation frameworks: recommendations and generated content</p>
+          </div>
+          <div>
+            <p class="label">Partners</p>
+            <p>Product, data science, AI &amp; engineering</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="band">
+      <div class="shell split">
+        <div>
+          <p class="step-kicker">The problem</p>
+          <h2>Rich data. No way to make it useful.</h2>
+          <p>Small business owners on GrabMerchant struggled to improve performance. They were time-poor, overwhelmed, and unsure where to start.</p>
+        </div>
+        <div class="questions">
+          <p class="label teal-label">What merchants kept asking</p>
+          <h3>Why are my sales going down?</h3>
+          <h3>What should I do to get more orders?</h3>
+          <h3>How do I even start optimizing?</h3>
+          <p class="opportunity">The opportunity: an assistant that answers in natural language, surfaces personalized insights, converts them into low-effort actions — and earns trust through calm, clear language.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell split">
+        <div>
+          <p class="step-kicker">01 — Intent map</p>
+          <h2>Mapping the messy into meaningful intent</h2>
+          <p>We sifted support tickets, bot queries, search logs and interviews to find the patterns beneath the noise.</p>
+          <p class="hand-row"><span class="hand">messy questions first, words second</span></p>
+        </div>
+        <div>
+          <div class="clusters" aria-label="Intent clusters">
+            <span class="cluster">Growing sales</span>
+            <span class="cluster">Fixing operations</span>
+            <span class="cluster">Managing menus</span>
+            <span class="cluster">Learning from peers</span>
+          </div>
+          <div class="example">
+            <p class="label">Raw query</p>
+            <p class="line">“Why am I not getting orders?”</p>
+            <p class="map-line">Growing sales → diagnose with order and visibility signals before advising.</p>
+          </div>
+          <div class="takeaway">
+            <h3>Coach, not search engine</h3>
+            <p>The assistant had to feel like it understood the business before the merchant finished the question.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <p class="step-kicker">02 — System prompt</p>
+        <h2 class="block-title">Writing the rules the model speaks by</h2>
+        <p style="max-width:46em;margin-bottom:18px">I wrote the system prompt that governs how the assistant speaks and responds. <span class="caveat-line">Prompt guidance shapes behavior — it is not a guarantee of enforcement.</span></p>
+        <p class="hand" style="margin-bottom:22px">hedge, don’t guess</p>
+        <div class="prompt-grid">
+          <ol class="pillars">
+            <li><span class="n">1</span><div><strong>Role</strong><span>Calm, competent business coach</span></div></li>
+            <li><span class="n">2</span><div><strong>Merchant context</strong></div></li>
+            <li><span class="n">3</span><div><strong>Voice rules</strong><span>Answer first. One next step. No jargon.</span></div></li>
+            <li><span class="n">4</span><div><strong>Uncertainty</strong><span>Name the evidence; never invent causes</span></div></li>
+            <li><span class="n">5</span><div><strong>Boundaries</strong><span>Out-of-scope topics hand off to Support</span></div></li>
+          </ol>
+          <div>
+            <div class="prompt">
+              <p class="label">System prompt — excerpt</p>
+              <pre>## Uncertainty
+If the data covers fewer than 7 days, say so.
+Describe what changed; do not claim why.
+✓ “Orders dipped 12% vs last week. Photos
+   on top dishes often help — want to try?”
+✗ “Your sales dropped because of competitors.”
+
+## Boundaries
+Payouts, disputes, policy → hand off:
+“That’s one for our Support team — here’s
+ how to reach them.”</pre>
+            </div>
+            <p class="badge badge-concept center-badge"><span class="dot" aria-hidden="true"></span>Illustrative reconstruction — for review</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <p class="step-kicker">03 — Response logic</p>
+        <h2 class="block-title">Tie every suggestion to a signal, not a vibe</h2>
+        <p style="max-width:46em;margin-bottom:20px">Before the model, there was a doc full of “What should it say if…?”. Logic trees became modular, templated content blocks.</p>
+        <div class="logic-grid">
+          <article class="card">
+            <p class="label">Signal</p>
+            <h3>Trigger</h3>
+          </article>
+          <article class="card">
+            <p class="label">Content block</p>
+            <h3>Template</h3>
+          </article>
+          <article class="card">
+            <p class="label">Safety net</p>
+            <h3>Fallback</h3>
+          </article>
+        </div>
+        <div class="note-box">
+          <p>Testing with merchants: they liked clarity over cleverness, flagged advice that sounded robotic or vague, and wanted suggestions — not just answers. We refined copy, restructured decision trees and added fallbacks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="step-kicker">04 — Evaluation</p>
+            <h2>Two kinds of “good” — judged separately</h2>
+            <p>I contributed to evaluation frameworks for the recommendation engine and for Grab’s content-generation tool. Good advice in bad words fails; so does beautiful copy that gives the wrong advice.</p>
+            <p class="hand-row"><span class="hand">good advice in bad words still fails</span></p>
+          </div>
+          <div>
+            <div class="rubric">
+              <article>
+                <h3>Advice quality</h3>
+                <ul>
+                  <li>Relevance</li>
+                  <li>Actionability</li>
+                  <li>Grounding</li>
+                </ul>
+              </article>
+              <article>
+                <h3>Content quality</h3>
+                <ul>
+                  <li>Terminology</li>
+                  <li>Voice</li>
+                  <li>Usability</li>
+                </ul>
+              </article>
+            </div>
+            <ol class="steps-4">
+              <li class="step-card"><p class="n">Step 1</p><p>Score a shared sample</p></li>
+              <li class="step-card"><p class="n">Step 2</p><p>Compare disagreements</p></li>
+              <li class="step-card"><p class="n">Step 3</p><p>Refine definitions &amp; examples</p></li>
+              <li class="step-card"><p class="n">Step 4</p><p>Re-score and lock</p></li>
+            </ol>
+            <p class="badge badge-concept center-badge"><span class="dot" aria-hidden="true"></span>Illustrative reconstruction — for review</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell split">
+        <div>
+          <p class="step-kicker">05 — Outcome</p>
+          <h2>What changed</h2>
+        </div>
+        <div>
+          <p>What started as reactive writing became a proactive system — modular content tied to data signals, a prompt that encodes voice and boundaries, and shared criteria for judging AI output.</p>
+          <div class="note-box">
+            <p>Results and launch details are pending confirmation and will only be shown if approved for sharing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell">
+      <footer class="case-footer">
+        <div>
+          <p class="label">Back to</p>
+          <a href="../">← GrabMerchant AI Assistant</a>
+        </div>
+        <div class="next">
+          <p class="label">Next project</p>
+          <a href="../chitchat/">Designing chitchat →</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <script src="../../js/site.js"></script>
+</body>
+</html>

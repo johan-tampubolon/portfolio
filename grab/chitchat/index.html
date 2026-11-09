@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Designing chitchat — Johan Tampubolon</title>
+  <meta name="description" content="Designing chitchat that stays warm — and useful — for the GrabMerchant AI Assistant.">
+  <meta name="theme-color" content="#f5f0e6">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="project">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="wordmark" href="../../" aria-label="Johan Tampubolon, home">
+        <span class="wordmark-name"><span class="wj">Johan<svg class="wj-line" viewBox="0 0 80 8" aria-hidden="true"><path d="M2 5.2C16 2 28 7 44 4.2S66 6.2 78 3.2" stroke="#d2432a" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></span>Tampubolon</span>
+        <span class="wordmark-tag">← writes for machines &amp; people</span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+      <nav id="nav-menu" class="nav-links" aria-label="Primary">
+        <a href="../../#work">Work</a>
+        <a href="../../#approach">Approach</a>
+        <a href="../../#about">About</a>
+        <a class="btn-pill" href="../../#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="case-hero">
+      <div class="shell">
+        <p class="crumb"><a href="../">← GrabMerchant AI Assistant</a> <span aria-hidden="true">/</span> <span>Project 03 of 04</span></p>
+        <h1>Designing chitchat that stays warm — and useful</h1>
+        <p class="lead">Merchants don’t only ask business questions. They say hello, say thanks, vent about a slow day, or test whether the bot is human. I designed how the assistant handles that small talk.</p>
+        <div class="meta meta-3">
+          <div>
+            <p class="label">Confirmed</p>
+            <p>Designing chitchat for the AI Assistant</p>
+          </div>
+          <div>
+            <p class="label">My focus</p>
+            <p>Small-talk intents, response patterns, boundaries</p>
+          </div>
+          <div>
+            <p class="label">Not yet confirmed</p>
+            <p>Methods, rollout and outcomes — shown here as illustrative drafts</p>
+          </div>
+        </div>
+        <p class="badge badge-pending hero-badge"><span class="dot" aria-hidden="true"></span>Project confirmed · details pending</p>
+      </div>
+    </header>
+
+    <section class="band">
+      <div class="shell split">
+        <div>
+          <p class="step-kicker">01 — Challenge</p>
+          <h2>Small talk is still part of the product</h2>
+          <p>Ignore it and the assistant feels robotic. Overdo it and it pretends to be a friend. Either way, trust drops.</p>
+        </div>
+        <div>
+          <p class="pull">Acknowledge, add a little warmth, then offer one useful next step — and never pretend to be human.</p>
+          <p class="hand-row"><span class="hand">warm ≠ pretending to be human</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="step-kicker">02 — Approach</p>
+            <h2>A pattern for every kind of small talk</h2>
+            <p class="intro">Proposed reconstruction of the approach, for review.</p>
+          </div>
+          <div>
+            <div class="cards">
+              <article class="card">
+                <p class="n">1</p>
+                <h3>Name the moments</h3>
+                <p>Greeting, thanks, venting, off-topic, “are you a bot?”</p>
+              </article>
+              <article class="card">
+                <p class="n">2</p>
+                <h3>One pattern</h3>
+                <p>Acknowledge → brief warmth → one relevant next step.</p>
+              </article>
+              <article class="card">
+                <p class="n">3</p>
+                <h3>Clear boundaries</h3>
+                <p>Be transparent about being AI; no personal opinions; gently steer back.</p>
+              </article>
+            </div>
+            <p class="badge badge-concept center-badge"><span class="dot" aria-hidden="true"></span>Illustrative reconstruction — for review</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell">
+        <div class="split">
+          <div>
+            <p class="step-kicker">03 — Example artifact</p>
+            <h2>Intent → response patterns</h2>
+            <p class="intro">Original example exchanges written for this page.</p>
+          </div>
+          <div>
+            <div class="pairs">
+              <div class="pair">
+                <p class="label">Greeting</p>
+                <p class="hand" style="font-size:26px">“Hi!”</p>
+                <p>Hi! Want a quick look at how this week is going?</p>
+              </div>
+              <div class="pair">
+                <p class="label">Venting</p>
+                <p class="hand" style="font-size:26px">“Slow day today…”</p>
+                <p>Slow days are tough. Want to see which dishes still sold well, so we can push them?</p>
+              </div>
+              <div class="pair">
+                <p class="label">Identity</p>
+                <p class="hand" style="font-size:26px">“Are you a real person?”</p>
+                <p>I’m an AI assistant, here to help with your store. For account issues I can point you to our Support team.</p>
+              </div>
+            </div>
+            <p class="badge badge-concept center-badge"><span class="dot" aria-hidden="true"></span>From portfolio record</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="shell split">
+        <div>
+          <p class="step-kicker">04 — Evidence</p>
+          <h2>What I'll confirm before publishing</h2>
+          <p>No results are claimed on this page.</p>
+        </div>
+        <div>
+          <ul class="checks">
+            <li><span class="box" aria-hidden="true"></span>Which chitchat intents were in scope</li>
+            <li><span class="box" aria-hidden="true"></span>How patterns were written into prompts or templates</li>
+            <li><span class="box" aria-hidden="true"></span>How responses were reviewed or tested</li>
+            <li><span class="box" aria-hidden="true"></span>Any signals approved for sharing</li>
+          </ul>
+          <p class="badge badge-pending center-badge"><span class="dot" aria-hidden="true"></span>Outcomes pending confirmation</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell">
+      <footer class="case-footer">
+        <div>
+          <p class="label">Back to</p>
+          <a href="../">← GrabMerchant AI Assistant</a>
+        </div>
+        <div class="next">
+          <p class="label">Next project</p>
+          <a href="../support/">Adding support capability →</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <script src="../../js/site.js"></script>
+</body>
+</html>
